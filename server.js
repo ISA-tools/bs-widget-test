@@ -31,5 +31,5 @@ app.get('*', function (req, res){
 });
 
 app.listen(port, () => {
-    console.log(`ISA-explorer listening on port ${port}`);
+    console.log(`BioSHaring Widget Test listening on port ${port}`);
 });
