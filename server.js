@@ -19,6 +19,7 @@ const indexHtmlFile = path.resolve(__dirname, 'index.html');
 
 app.use(compression());
 
+app.use('/dist', express.static(`${__dirname}/dist`));
 // app.use('/assets', express.static(`${__dirname}/assets`));
 // app.use('/data', express.static(`${__dirname}/data`));
 // app.use('/isatab-index.json', express.static(`${__dirname}/isatab-index.json`));
@@ -27,6 +28,7 @@ app.use(compression());
 // handle every other route with index.html, which will contain
 // a script tag to your application's JavaScript file(s).
 app.get('*', function (req, res){
+    console.log('Redirecting to index.html...');
     res.sendFile(indexHtmlFile);
 });
 
