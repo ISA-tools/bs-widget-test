@@ -2,9 +2,9 @@ import Vue from 'vue';
 import vSelect from 'vue-select';
 import App from './App.vue';
 
-const FAIR_SHARING_HOST = 'http://localhost:8000';
+// const FAIR_SHARING_HOST = 'http://localhost:8000';
 const API_KEY = '990cc0602b65a390c1029ecceb33ebefb6454df5';
-// const FAIR_SHARING_HOST = 'http://fairsharing.org';
+const FAIR_SHARING_HOST = 'http://fairsharing.org';
 
 
 Vue.component('vSelect', vSelect);
