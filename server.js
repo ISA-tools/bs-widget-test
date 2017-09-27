@@ -14,7 +14,7 @@ const express = require('express'), port = process.env.PORT || 3000,
     // ISATAB_INDEX_FILE = 'isatab-index.json',
     // INVESTIGATIONS_ID_REGEX = /^sdata/;
 
-const indexHtmlFile = path.resolve(__dirname, 'index.html');
+const indexHtmlFile = path.resolve(__dirname, 'index-demo.html');
 
 
 app.use(compression());
