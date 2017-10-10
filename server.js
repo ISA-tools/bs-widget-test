@@ -14,7 +14,9 @@ const express = require('express'), port = process.env.PORT || 3000,
     // ISATAB_INDEX_FILE = 'isatab-index.json',
     // INVESTIGATIONS_ID_REGEX = /^sdata/;
 
-const indexHtmlFile = path.resolve(__dirname, 'index-demo.html');
+const SINGLE_COLLECTION_DEMO = 'index-demo.html';
+const MULTIPLE_COLLECTION_DEMO = 'index.html';
+const indexHtmlFile = path.resolve(__dirname, MULTIPLE_COLLECTION_DEMO);
 
 
 app.use(compression());
@@ -30,6 +32,11 @@ app.use('/dist', express.static(`${__dirname}/dist`));
 app.get('*', function (req, res){
     console.log('Redirecting to index.html...');
     res.sendFile(indexHtmlFile);
+});
+
+app.get('/demo-single', (req, res) => {
+    console.log('Going to single widget demo...');
+    res.sendFile(path.resolve(__dirname, SINGLE_COLLECTION_DEMO));
 });
 
 app.listen(port, () => {
