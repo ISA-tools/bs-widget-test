@@ -26,17 +26,16 @@ app.use('/dist', express.static(`${__dirname}/dist`));
 // app.use('/data', express.static(`${__dirname}/data`));
 // app.use('/isatab-index.json', express.static(`${__dirname}/isatab-index.json`));
 
+app.get('/demo-single', (req, res) => {
+    console.log('Going to single widget demo...');
+    res.sendFile(path.resolve(__dirname, SINGLE_COLLECTION_DEMO));
+});
 
 // handle every other route with index.html, which will contain
 // a script tag to your application's JavaScript file(s).
 app.get('*', function (req, res){
     console.log('Redirecting to index.html...');
     res.sendFile(indexHtmlFile);
-});
-
-app.get('/demo-single', (req, res) => {
-    console.log('Going to single widget demo...');
-    res.sendFile(path.resolve(__dirname, SINGLE_COLLECTION_DEMO));
 });
 
 app.listen(port, () => {
