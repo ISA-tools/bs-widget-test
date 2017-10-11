@@ -23,11 +23,14 @@
             </p>
         </div>
         <div>
-            <v-select :options="collections" :on-change="updateWidgetView" placeholder="Please select a collection or recommendation"></v-select>
+            <div style="width:800px; margin-left: auto; margin-right: auto;">
+                <v-select :options="collections" :on-change="updateWidgetView" placeholder="Please select a collection or recommendation"></v-select>
+            </div>
 
             <div id='widget' style="width:800px; height:800px;
                                     margin-left: auto;
-                                    margin-right: auto;"></div>
+                                    margin-right: auto;
+                                    overflow-y: scroll;"></div>
         </div>
         <div id="last-paragraph">
             <h3>Last Section</h3>

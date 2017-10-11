@@ -4,7 +4,6 @@ import axios from 'axios';
 import App from './App.vue';
 
 // const FAIR_SHARING_HOST = 'http://localhost:8000';
-// const API_KEY = '990cc0602b65a390c1029ecceb33ebefb6454df5';
 const FAIR_SHARING_HOST = 'https://fairsharing.org';
 const API_KEY = '61a1d9dac1106cdbec955a91cfc1ffcf58b29ade';
 
