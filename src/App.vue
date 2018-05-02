@@ -49,7 +49,7 @@ export default {
     methods: {
         updateWidgetView(collection) {
             this.widget && this.widget.unmount();
-            this.widget = BSCollection.default.widgets.singleViewWidget.new({
+            this.widget = FAIRsharingServices.default.widgets.singleViewWidget.new({
                 host: this.host,
                 apiKey: this.apiKey,
                 id: collection.value,

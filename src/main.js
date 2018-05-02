@@ -15,7 +15,7 @@ new Vue({
 
     components: { vSelect },
 
-    render: function(createElement) {
+    render(createElement) {
         return createElement(App, {
             props: {
                 collections: this.collections,
@@ -26,13 +26,15 @@ new Vue({
         });
     },
 
-    data: {
-        collections: []
+    data() {
+        return {
+            collections: []
+        };
     },
 
     methods: {
 
-        getCollections: async function() {
+        async getCollections() {
             const headers = {
                 'Content-Type': 'application/json',
                 'Api-Key': API_KEY,
